@@ -1,0 +1,111 @@
+/* Reset minimal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #fdfdfc;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("hero-bg.jpg") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #b22222;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #8b1a1a;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+/* Valeurs */
+.valeurs {
+    background: #faf5f0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+/* Témoignages */
+.temoignages blockquote {
+    font-style: italic;
+    background: #eee;
+    padding: 15px 20px;
+    border-left: 5px solid #b22222;
+    margin: 20px 0;
+}
+
+/* Communauté */
+.communaute {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Footer */
+.footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.footer .small {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #aaa;
+}
