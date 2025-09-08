@@ -1,14 +1,29 @@
-/* Reset minimal */
+/* -------------------- */
+/* Reset et variables   */
+/* -------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --primary: #b22222;
+    --primary-dark: #8b1a1a;
+    --text: #222;
+    --light-bg: #faf5f0;
+    --dark-bg: #111;
+    --grey: #eee;
+    --font-main: "Segoe UI", Arial, sans-serif;
+}
+
+/* -------------------- */
+/* Base                 */
+/* -------------------- */
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: var(--font-main);
     line-height: 1.6;
-    color: #222;
+    color: var(--text);
     background: #fdfdfc;
 }
 
@@ -18,42 +33,50 @@ body {
     margin: 0 auto;
 }
 
-/* Hero */
+/* -------------------- */
+/* Hero                 */
+/* -------------------- */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("hero-bg.jpg") center/cover no-repeat;
     color: #fff;
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
 }
 
+/* -------------------- */
+/* Boutons              */
+/* -------------------- */
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    background: #b22222;
+    padding: 14px 28px;
+    background: var(--primary);
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
+    font-weight: bold;
     transition: background 0.3s ease;
 }
 
 .btn:hover {
-    background: #8b1a1a;
+    background: var(--primary-dark);
 }
 
-/* Sections */
+/* -------------------- */
+/* Sections générales   */
+/* -------------------- */
 section {
-    padding: 60px 20px;
+    padding: 70px 20px;
 }
 
 h2 {
@@ -63,49 +86,118 @@ h2 {
 }
 
 h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    text-align: center;
 }
 
-/* Valeurs */
+/* -------------------- */
+/* Présentation         */
+/* -------------------- */
+.presentation {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+}
+
+/* -------------------- */
+/* Valeurs              */
+/* -------------------- */
 .valeurs {
-    background: #faf5f0;
+    background: var(--light-bg);
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     text-align: center;
 }
 
-/* Témoignages */
+.valeurs p {
+    font-size: 1rem;
+}
+
+/* -------------------- */
+/* Témoignages          */
+/* -------------------- */
 .temoignages blockquote {
     font-style: italic;
-    background: #eee;
-    padding: 15px 20px;
-    border-left: 5px solid #b22222;
+    background: var(--grey);
+    padding: 18px 22px;
+    border-left: 5px solid var(--primary);
     margin: 20px 0;
+    border-radius: 4px;
 }
 
-/* Communauté */
+/* -------------------- */
+/* Communauté           */
+/* -------------------- */
 .communaute {
-    background: #222;
+    background: var(--text);
     color: #fff;
     text-align: center;
-    padding: 80px 20px;
+    padding: 90px 20px;
 }
 
-/* Footer */
+.communaute h2 {
+    color: #fff;
+}
+
+/* -------------------- */
+/* FAQ SEO              */
+/* -------------------- */
+.faq details {
+    background: var(--grey);
+    margin: 15px 0;
+    padding: 15px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.faq summary {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.faq p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* -------------------- */
+/* Footer               */
+/* -------------------- */
 .footer {
-    background: #111;
+    background: var(--dark-bg);
     color: #fff;
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
 }
 
 .footer .small {
     font-size: 0.9rem;
-    margin-top: 10px;
+    margin-top: 12px;
     color: #aaa;
+}
+
+/* -------------------- */
+/* Responsive           */
+/* -------------------- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
 }
